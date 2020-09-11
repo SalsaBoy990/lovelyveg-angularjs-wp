@@ -1,0 +1,29 @@
+/*!
+ * AngularJS Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v1.2.0
+ */
+
+/*! https://mths.be/he v1.2.0 by @mathias | MIT license */
+
+/**
+ * @license AngularJS v1.8.0
+ * (c) 2010-2020 Google, Inc. http://angularjs.org
+ * License: MIT
+ */
+
+/**
+ * A WP REST API client for Node.js
+ *
+ * @example
+ *     var wp = new WPAPI({ endpoint: 'http://src.wordpress-develop.dev/wp-json' });
+ *     wp.posts().then(function( posts ) {
+ *         console.log( posts );
+ *     }).catch(function( err ) {
+ *         console.error( err );
+ *     });
+ *
+ * @license MIT
+ })
+ */

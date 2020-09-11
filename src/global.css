@@ -1,0 +1,9 @@
+.mat-spacer {
+  flex: 1 1 auto;
+}
+
+.mt-anchor:hover {
+  background-color: rgba(158,158,158,0.2);
+  transition: box-shadow .4s cubic-bezier(.25,.8,.25,1);
+  background-color: .4s cubic-bezier(.25,.8,.25,1);
+}

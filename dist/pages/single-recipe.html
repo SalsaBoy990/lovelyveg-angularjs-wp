@@ -1,0 +1,9 @@
+<md-progress-circular ng-hide="singleRecipe.post" md-mode="indeterminate" class="md-accent"></md-progress-circular>
+
+<h1 class="md-display-1" ng-if="singleRecipe.post.title.rendered">
+  {{ singleRecipe.post.title.rendered | decodeHtmlEntities }}</h1>
+<span class="md-caption md-gray9" ng-if="singleRecipe.post.date">{{ singleRecipe.post.date | date: 'yyyy-MM-dd' }}</span>
+
+<md-content ng-if="singleRecipe.post.content.rendered" ng-bind-html="singleRecipe.post.content.rendered">
+
+</md-content>

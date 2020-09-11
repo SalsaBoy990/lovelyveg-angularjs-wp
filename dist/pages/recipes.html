@@ -1,0 +1,27 @@
+<h1 class="md-display-1">{{ recipes.name }}</h1>
+
+<md-progress-circular ng-hide="recipes.posts" md-mode="indeterminate" class="md-accent"></md-progress-circular>
+<md-content class="md-padding" layout-xs="column" layout="row" layout-wrap>
+  <div ng-repeat="post in recipes.posts" flex-xs flex-gt-xs="50" flex-gt-sm="50" flex-gt-md="25" flex-gt-lg="25" layout="column">
+    <md-card>
+      <md-card-title>
+        <md-card-title-text>
+          <a ng-href="#" class="mt-anchor" ng-style="{ 'color': 'currentColor', 'text-decoration': 'none'}">
+            <span class="md-title">{{ post.title.rendered | decodeHtmlEntities }}</span>
+          </a>
+          <span class="md-caption md-gray9" ng-if="post.date">{{ post.date | date: 'yyyy-MM-dd' }}</span>
+          <span class="md-subhead" ng-bind-html="post.excerpt.rendered"></span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-md card-media">
+            <img ng-src="{{ post._embedded['wp:featuredmedia']['0'].source_url }}" alt="{{ post.title.rendered | decodeHtmlEntities }}">
+          </div>
+        </md-card-title-media>
+      </md-card-title>
+      <md-card-actions layout="row" layout-align="end center">
+        <md-button class="md-primary" ng-href="{{ '#!/receptek/' + post.slug }}">Tovább <i class="fa fa-chevron-right" ng-style="{ 'color': '#CCC'}"></i>
+        </md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</md-content>

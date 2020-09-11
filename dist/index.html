@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu-hu" ng-app="lovelyvegApp">
+
+<head>
+  <title>LovelyVeg.hu receptkereső</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- load my custom css styles -->
+  <link rel="stylesheet" href="css/global.css">
+
+  <!-- Webpack bundle -->
+  <script src="bundle.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <md-toolbar>
+      <mat-toolbar-row layout-padding>
+        <span class="mat-spacer md-title">LovelyVeg Receptkereső</span>
+      </mat-toolbar-row>
+    </md-toolbar>
+  </header>
+  <!-- headerController -->
+  <main ng-controller="mainController" ng-cloak>
+    <md-content class="md-padding" layout-padding>
+      <md-nav-bar md-no-ink-bar="disableInkBar" md-selected-nav-item="currentNavItem"
+        nav-bar-aria-label="navigation links">
+
+        <md-nav-item md-nav-href="#!/" name="home" value="home">
+          <i class="fa fa-home"></i> Kezdőlap
+        </md-nav-item>
+        <md-nav-item md-nav-href="#!/receptek" name="receptek" value="receptek">
+          Vegán receptek
+        </md-nav-item>
+      </md-nav-bar>
+
+      <div class="ext-content">
+
+        <div ng-view></div>
+
+      </div>
+    </md-content>
+    </div>
+  </main>
+
+</body>
+
+</html>

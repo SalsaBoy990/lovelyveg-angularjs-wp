@@ -1,0 +1,44 @@
+{
+  "name": "decoupled_wp",
+  "version": "1.0.0",
+  "description": "A decoupled WP powered AngularJS site",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "webpack-dev-server --https",
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andras Gulacsi",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "angular": "^1.8.0",
+    "angular-animate": "^1.8.0",
+    "angular-aria": "^1.8.0",
+    "angular-material": "^1.2.0",
+    "angular-resource": "^1.8.0",
+    "angular-route": "^1.8.0",
+    "angular-sanitize": "^1.8.0",
+    "babel-loader": "^8.1.0",
+    "bootstrap": "^4.5.2",
+    "css-loader": "^4.3.0",
+    "he": "^1.2.0",
+    "style-loader": "^1.2.1",
+    "timeago.js": "^4.0.2",
+    "wpapi": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "file-loader": "^6.1.0",
+    "terser": "^5.3.1",
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

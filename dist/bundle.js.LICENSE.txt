@@ -5,7 +5,469 @@
  * v1.2.0
  */
 
+/*! ../util/alphanumeric-sort */
+
+/*! ../util/argument-is-numeric */
+
+/*! ../util/key-val-to-obj */
+
+/*! ../util/object-reduce */
+
+/*! ../util/parameter-setter */
+
+/*! ../util/unique */
+
+/*! ./../webpack/buildin/global.js */
+
+/*! ./../webpack/buildin/module.js */
+
+/*! ./agent-base */
+
+/*! ./angular */
+
+/*! ./angular-animate */
+
+/*! ./angular-aria */
+
+/*! ./angular-material */
+
+/*! ./angular-resource */
+
+/*! ./angular-route */
+
+/*! ./angular-sanitize */
+
+/*! ./constructors/wp-request */
+
+/*! ./controllers.js */
+
+/*! ./endpoint-factories */
+
+/*! ./endpoint-request */
+
+/*! ./filters */
+
+/*! ./format */
+
+/*! ./formats */
+
+/*! ./global.css */
+
+/*! ./is-object */
+
+/*! ./lang/en_US */
+
+/*! ./lang/zh_CN */
+
+/*! ./lib/autodiscovery */
+
+/*! ./lib/constructors/wp-request */
+
+/*! ./lib/data/default-routes.json */
+
+/*! ./lib/endpoint-factories */
+
+/*! ./lib/http-transport */
+
+/*! ./lib/route-tree */
+
+/*! ./lib/util/object-reduce */
+
+/*! ./lib/wp-register-route */
+
+/*! ./mixins */
+
+/*! ./named-group-regexp */
+
+/*! ./parameters */
+
+/*! ./parse */
+
+/*! ./path-part-setter */
+
+/*! ./realtime */
+
+/*! ./register */
+
+/*! ./request-base */
+
+/*! ./resource-handler-spec */
+
+/*! ./response-base */
+
+/*! ./route-tree */
+
+/*! ./routes.js */
+
+/*! ./services.js */
+
+/*! ./stringify */
+
+/*! ./util/apply-mixin */
+
+/*! ./util/check-method-support */
+
+/*! ./util/ensure */
+
+/*! ./util/is-empty-object */
+
+/*! ./util/named-group-regexp */
+
+/*! ./util/object-reduce */
+
+/*! ./util/parameter-setter */
+
+/*! ./util/split-path */
+
+/*! ./utils */
+
+/*! ./utils/date */
+
+/*! ./utils/dom */
+
+/*! angular */
+
+/*! angular-animate */
+
+/*! angular-aria */
+
+/*! angular-material */
+
+/*! angular-material/angular-material.min.css */
+
+/*! angular-resource */
+
+/*! angular-route */
+
+/*! angular-sanitize */
+
+/*! component-emitter */
+
+/*! emoji-regex */
+
+/*! emoji-strip */
+
+/*! exports provided: /, /oembed/1.0, /oembed/1.0/embed, /oembed/1.0/proxy, /wp/v2, /wp/v2/posts, /wp/v2/posts/(?P<id>[\d]+), /wp/v2/posts/(?P<parent>[\d]+)/revisions, /wp/v2/posts/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+), /wp/v2/posts/(?P<id>[\d]+)/autosaves, /wp/v2/posts/(?P<parent>[\d]+)/autosaves/(?P<id>[\d]+), /wp/v2/pages, /wp/v2/pages/(?P<id>[\d]+), /wp/v2/pages/(?P<parent>[\d]+)/revisions, /wp/v2/pages/(?P<parent>[\d]+)/revisions/(?P<id>[\d]+), /wp/v2/pages/(?P<id>[\d]+)/autosaves, /wp/v2/pages/(?P<parent>[\d]+)/autosaves/(?P<id>[\d]+), /wp/v2/media, /wp/v2/media/(?P<id>[\d]+), /wp/v2/blocks, /wp/v2/blocks/(?P<id>[\d]+), /wp/v2/blocks/(?P<id>[\d]+)/autosaves, /wp/v2/blocks/(?P<parent>[\d]+)/autosaves/(?P<id>[\d]+), /wp/v2/types, /wp/v2/types/(?P<type>[\w-]+), /wp/v2/statuses, /wp/v2/statuses/(?P<status>[\w-]+), /wp/v2/taxonomies, /wp/v2/taxonomies/(?P<taxonomy>[\w-]+), /wp/v2/categories, /wp/v2/categories/(?P<id>[\d]+), /wp/v2/tags, /wp/v2/tags/(?P<id>[\d]+), /wp/v2/users, /wp/v2/users/(?P<id>[\d]+), /wp/v2/users/me, /wp/v2/comments, /wp/v2/comments/(?P<id>[\d]+), /wp/v2/search, /wp/v2/block-renderer/(?P<name>core/block), /wp/v2/block-renderer/(?P<name>core/latest-comments), /wp/v2/block-renderer/(?P<name>core/archives), /wp/v2/block-renderer/(?P<name>core/categories), /wp/v2/block-renderer/(?P<name>core/latest-posts), /wp/v2/block-renderer/(?P<name>core/shortcode), /wp/v2/settings, /wp/v2/themes, default */
+
+/*! exports provided: cancel, render */
+
+/*! exports provided: default */
+
+/*! exports provided: format */
+
+/*! exports provided: format, render, cancel, register */
+
+/*! exports provided: getDateAttribute, setTimerId, getTimerId */
+
+/*! exports provided: register, getLocale */
+
+/*! exports provided: toDate, formatDiff, diffSec, nextInterval */
+
+/*! he */
+
 /*! https://mths.be/he v1.2.0 by @mathias | MIT license */
+
+/*! li */
+
+/*! no exports provided */
+
+/*! no static exports found */
+
+/*! qs */
+
+/*! superagent */
+
+/*! timeago.js */
+
+/*! wpapi */
+
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
+
+/*!***********************!*\
+  !*** ./src/routes.js ***!
+  \***********************/
+
+/*!************************!*\
+  !*** ./src/global.css ***!
+  \************************/
+
+/*!*************************!*\
+  !*** ./src/services.js ***!
+  \*************************/
+
+/*!****************************!*\
+  !*** ./src/controllers.js ***!
+  \****************************/
+
+/*!*******************************!*\
+  !*** ./node_modules/he/he.js ***!
+  \*******************************/
+
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** (webpack)/buildin/module.js ***!
+  \***********************************/
+
+/*!*************************************!*\
+  !*** ./node_modules/wpapi/wpapi.js ***!
+  \*************************************/
+
+/*!**************************************!*\
+  !*** ./node_modules/li/lib/index.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./node_modules/qs/lib/index.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./node_modules/qs/lib/parse.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./node_modules/qs/lib/utils.js ***!
+  \**************************************/
+
+/*!***************************************!*\
+  !*** ./node_modules/angular/index.js ***!
+  \***************************************/
+
+/*!****************************************!*\
+  !*** ./node_modules/qs/lib/formats.js ***!
+  \****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/angular/angular.js ***!
+  \*****************************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/qs/lib/stringify.js ***!
+  \******************************************/
+
+/*!*******************************************!*\
+  !*** ./node_modules/emoji-strip/index.js ***!
+  \*******************************************/
+
+/*!********************************************!*\
+  !*** ./node_modules/angular-aria/index.js ***!
+  \********************************************/
+
+/*!*********************************************!*\
+  !*** ./node_modules/angular-route/index.js ***!
+  \*********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/superagent/lib/utils.js ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/timeago.js/esm/index.js ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/wpapi/lib/route-tree.js ***!
+  \**********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/angular-animate/index.js ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/superagent/lib/client.js ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/timeago.js/esm/format.js ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/wpapi/lib/util/ensure.js ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/wpapi/lib/util/unique.js ***!
+  \***********************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/angular-material/index.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/angular-resource/index.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/angular-sanitize/index.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/wpapi/lib/mixins/index.js ***!
+  \************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/component-emitter/index.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/timeago.js/esm/realtime.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/timeago.js/esm/register.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/wpapi/lib/autodiscovery.js ***!
+  \*************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/superagent/lib/is-object.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/timeago.js/esm/utils/dom.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/wpapi/lib/http-transport.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/wpapi/lib/mixins/filters.js ***!
+  \**************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/angular-aria/angular-aria.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/superagent/lib/agent-base.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/timeago.js/esm/lang/en_US.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/timeago.js/esm/lang/zh_CN.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/timeago.js/esm/utils/date.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/wpapi/lib/util/split-path.js ***!
+  \***************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/wpapi/lib/endpoint-request.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/wpapi/lib/path-part-setter.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/wpapi/lib/util/apply-mixin.js ***!
+  \****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/angular-route/angular-route.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/superagent/lib/request-base.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/wpapi/lib/mixins/parameters.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/wpapi/lib/wp-register-route.js ***!
+  \*****************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/superagent/lib/response-base.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/wpapi/lib/endpoint-factories.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/wpapi/lib/util/object-reduce.js ***!
+  \******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/wpapi/lib/util/key-val-to-obj.js ***!
+  \*******************************************************/
+
+/*!********************************************************!*\
+  !*** ./node_modules/wpapi/lib/util/is-empty-object.js ***!
+  \********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/angular-animate/angular-animate.js ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/wpapi/lib/data/default-routes.json ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/wpapi/lib/resource-handler-spec.js ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/wpapi/lib/util/parameter-setter.js ***!
+  \*********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/wpapi/lib/util/alphanumeric-sort.js ***!
+  \**********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/angular-material/angular-material.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/angular-resource/angular-resource.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/angular-sanitize/angular-sanitize.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/wpapi/lib/constructors/wp-request.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/wpapi/lib/util/named-group-regexp.js ***!
+  \***********************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/wpapi/lib/util/argument-is-numeric.js ***!
+  \************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/wpapi/lib/util/check-method-support.js ***!
+  \*************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./node_modules/angular-material/angular-material.min.css ***!
+  \****************************************************************/
+
+/*!********************************************************************!*\
+  !*** ./node_modules/emoji-strip/node_modules/emoji-regex/index.js ***!
+  \********************************************************************/
 
 /**
  * @license AngularJS v1.8.0

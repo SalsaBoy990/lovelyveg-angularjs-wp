@@ -1,0 +1,41 @@
+<h1 ng-if="tags.name" class="md-display-1">{{ tags.name }} <span
+    ng-if="tags.totalPages > 1">{{ '- ' + tags.pageNumber + '. oldal' }}</span>
+</h1>
+<h2 ng-if="tags.count" class="md-subhead md-gray9">{{ 'Összes találat: ' + tags.count }}</h2>
+
+<md-progress-circular ng-hide="tags.posts" md-mode="indeterminate" class="md-accent"></md-progress-circular>
+
+<md-content ng-show="tags.posts" class="md-padding" layout-xs="column" layout="row" layout-wrap>
+  <div ng-repeat="post in tags.posts" flex-xs flex-gt-xs="50" flex-gt-sm="50" flex-gt-md="25" flex-gt-lg="25"
+    layout="column">
+    <!-- post list directive -->
+    <post-list post-data="post"></post-list>
+    <!-- post list directive -->
+  </div>
+
+  <nav ng-if="tags.totalPages > 1" ng-style="{ 'margin-top': '32px', 'margin-bottom': '64px'}">
+    <section layout="row" layout-align="left left" layout-wrap>
+      <a class="md-paginator-links" ng-repeat="x in [].constructor(tags.totalPages) track by $index"
+        ng-href="{{ '#!/temakorok/' + tags.currentSlug + '/oldal/' + ($index + 1) }}"
+        ng-class="{ 'md-primary md-paginator-active': tags.pageNumber == ($index + 1) }">
+        {{ $index + 1 }}
+      </a>
+    </section>
+  </nav>
+
+</md-content>
+
+
+<md-button class="md-fab md-fab-bottom-left" ng-click="tags.jumpToPrevPage()" ng-if="tags.pageNumber > 1">
+  <md-tooltip md-direction="top">
+    Előző oldal
+  </md-tooltip>
+  <md-icon md-font-icon="chevron_left" class="md-white-icon">chevron_left</md-icon>
+</md-button>
+
+<md-button class="md-fab md-fab-bottom-right" ng-click="tags.jumpToNextPage()" ng-if="tags.pageNumber < tags.totalPages">
+  <md-tooltip md-direction="top">
+    Következő oldal
+  </md-tooltip>
+  <md-icon md-font-icon="chevron_right" class="md-white-icon">chevron_right</md-icon>
+</md-button>

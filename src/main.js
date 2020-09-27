@@ -23,8 +23,10 @@ import timeago from "timeago.js";
 
 import he from "he";
 
-require("@fortawesome/fontawesome-free/css/all.min.css");
+import emojiStrip from "emoji-strip"
+
 require("angular-material/angular-material.min.css");
+import "./global.css";
 
 // =========================================================
 
@@ -57,56 +59,10 @@ lovelyvegApp.config([
 
 
 // SERVICES
-// get site title and description
-lovelyvegApp.service("siteInfoService", function () {
-  // https://szlavidanceart.com/wp-json/
-  this.getSiteInfo = function () {
-    return wp.root().then(function (info) {
-      return {
-        title: info.name,
-        description: info.description,
-      };
-    });
-  };
-});
-
-// get posts for listing
-lovelyvegApp.service("postsService", function () {
-  // https://szlavidanceart.com/wp-json/
-  this.getPosts = function () {
-    return wp
-      .posts()
-      .perPage(10)
-      .embed()
-      .then(function (posts) {
-        return {
-          posts: posts,
-        };
-      });
-  };
-});
-
-// get single post by slug
-lovelyvegApp.service("singlePostService", function () {
-  this.getSinglePost = function (slug) {
-    return wp
-      .posts()
-      .slug(slug)
-      .embed()
-      .then(function (singlePost) {
-        return {
-          singlePost: singlePost,
-        };
-      });
-  };
-});
-
+require("./services.js")(lovelyvegApp, wp);
 
 // CONTROLLERS
-require("./controllers.js")(lovelyvegApp, {
-  wp: wp,
-  he: he,
-});
+require("./controllers.js")(lovelyvegApp, he, emojiStrip);
 
 // FILTERS
 lovelyvegApp.filter("decodeHtmlEntities", function () {
@@ -114,4 +70,46 @@ lovelyvegApp.filter("decodeHtmlEntities", function () {
     return he.decode(str + "");
   };
 });
+
+
+
+lovelyvegApp.directive("postList", () => {
+  return {
+    restrict: "EA",
+    templateUrl: "directives/post-list.html",
+    replace: true,
+    scope: {
+      postData: "="
+    }
+  }
+});
+
+lovelyvegApp.directive("postPaginator", () => {
+  return {
+    restrict: "EA",
+    templateUrl: "directives/post-paginator.html",
+    replace: true,
+    scope: {
+      paginatorData: "=",
+    }
+  }
+});
+
+// lovelyvegApp.directive("postsByTag", () => {
+//   return {
+//     restrict: "EA",
+//     templateUrl: "directives/posts-by-tag.html",
+//     replace: true,
+//     scope: {
+//       postsByTag: "=",
+      
+//       tag: "@"
+
+//       // use method
+//       convertToDateTime: "&",
+//       convertToFahrenheit: "&",
+//       convertToCelsius: "&",
+//     }
+//   }
+// })
 

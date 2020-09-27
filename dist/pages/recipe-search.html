@@ -1,0 +1,40 @@
+<h1 class="md-display-1">{{ search.name }}</h1>
+<div layout-gt-sm="column">
+
+  <md-input-container class="md-full-width">
+    <label>Add meg milyen receptet keresel:</label>
+    <md-icon md-font-icon="search">search</md-icon>
+    <input ng-model="search.searchTerm" type="text" ng-keypress="search.recipeSearch()">
+  </md-input-container>
+</div>
+
+<md-progress-circular ng-if="!search.searchResult && search.searchTerm.length >= 3" md-mode="indeterminate"
+  class="md-accent"></md-progress-circular>
+
+<md-content ng-if="search.searchTerm.length > 3 && search.searchResult.length === 0" class="md-padding"
+  layout-xs="column" layout="row" layout-wrap>
+  <p class="md-body-2">A keresett kifejezésre nincs találat.</p>
+</md-content>
+
+<md-content class="md-padding" layout-xs="column" layout="row" layout-wrap>
+  <div ng-repeat="post in search.searchResult" flex-xs flex-gt-xs="50" flex-gt-sm="50" flex-gt-md="25" flex-gt-lg="25"
+    layout="column">
+    <!-- post list directive -->
+    <post-list post-data="post"></post-list>
+    <!-- post list directive -->
+  </div>
+</md-content>
+
+
+<md-content class="md-padding" layout-xs="row" layout="row" layout-wrap>
+  <h2 class="md-subhead">Kategóriák szerint</h2>
+  <md-list layout="row" layout-align="left left" layout-wrap>
+    <md-list-item ng-repeat="tag in search.tags">
+      <div class="md-list-item-text">
+        <a ng-href="#!/temakorok/{{ tag.slug }}">{{ tag.name }}</a>
+
+      </div>
+    </md-list-item>
+  </md-list>
+  </section>
+</md-content>

@@ -1,27 +1,39 @@
 <h1 class="md-display-1">{{ recipes.name }}</h1>
+<h2 ng-if="recipes.count" class="md-body-1 md-gray9">{{ 'Összes recept: ' + recipes.count }}</h2>
 
 <md-progress-circular ng-hide="recipes.posts" md-mode="indeterminate" class="md-accent"></md-progress-circular>
-<md-content class="md-padding" layout-xs="column" layout="row" layout-wrap>
-  <div ng-repeat="post in recipes.posts" flex-xs flex-gt-xs="50" flex-gt-sm="50" flex-gt-md="25" flex-gt-lg="25" layout="column">
-    <md-card>
-      <md-card-title>
-        <md-card-title-text>
-          <a ng-href="#" class="mt-anchor" ng-style="{ 'color': 'currentColor', 'text-decoration': 'none'}">
-            <span class="md-title">{{ post.title.rendered | decodeHtmlEntities }}</span>
-          </a>
-          <span class="md-caption md-gray9" ng-if="post.date">{{ post.date | date: 'yyyy-MM-dd' }}</span>
-          <span class="md-subhead" ng-bind-html="post.excerpt.rendered"></span>
-        </md-card-title-text>
-        <md-card-title-media>
-          <div class="md-media-md card-media">
-            <img ng-src="{{ post._embedded['wp:featuredmedia']['0'].source_url }}" alt="{{ post.title.rendered | decodeHtmlEntities }}">
-          </div>
-        </md-card-title-media>
-      </md-card-title>
-      <md-card-actions layout="row" layout-align="end center">
-        <md-button class="md-primary" ng-href="{{ '#!/receptek/' + post.slug }}">Tovább <i class="fa fa-chevron-right" ng-style="{ 'color': '#CCC'}"></i>
-        </md-button>
-      </md-card-actions>
-    </md-card>
+
+<md-content ng-show="recipes.posts" class="md-padding" layout-xs="column" layout="row" layout-wrap>
+  <div ng-repeat="post in recipes.posts" flex-xs flex-gt-xs="50" flex-gt-sm="50" flex-gt-md="25" flex-gt-lg="25"
+    layout="column">
+    <!-- post list directive -->
+    <post-list post-data="post" remove-emoji="removeEmoji(content)"></post-list>
+    <!-- post list directive -->
   </div>
+
+  <nav ng-if="recipes.totalPages" ng-style="{ 'margin-top': '32px', 'margin-bottom': '64px'}">
+    <section layout="row" layout-align="left left" layout-wrap>
+      <a class="md-paginator-links" ng-repeat="x in [].constructor(recipes.totalPages) track by $index"
+        ng-href="{{ '#!/receptek/oldal/' + ($index + 1) }}"
+        ng-class="{ 'md-primary md-paginator-active': recipes.pageNumber == ($index + 1) }">
+        {{ $index + 1 }}
+      </a>
+    </section>
+  </nav>
+
 </md-content>
+
+
+<md-button class="md-fab md-fab-bottom-left" ng-click="recipes.jumpToPrevPage()" ng-if="recipes.pageNumber > 1">
+  <md-tooltip md-direction="top">
+    Előző receptek
+  </md-tooltip>
+  <md-icon md-font-icon="chevron_left" class="md-white-icon">chevron_left</md-icon>
+</md-button>
+
+<md-button class="md-fab md-fab-bottom-right" ng-click="recipes.jumpToNextPage()" ng-if="recipes.pageNumber < recipes.totalPages">
+  <md-tooltip md-direction="top">
+    Következő receptek
+  </md-tooltip>
+  <md-icon md-font-icon="chevron_right" class="md-white-icon">chevron_right</md-icon>
+</md-button>

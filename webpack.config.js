@@ -1,54 +1,55 @@
 // Imports: Dependencies
-const path = require('path');
+const path = require("path");
 require("@babel/register");
 
-const TerserPlugin = require('terser-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 // Webpack Configuration
 const config = {
-  target: 'web',
+  target: "web",
 
   // Entry
-  entry: './src/main.js',
-  
+  entry: "./src/main.js",
+
   // Output
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, "./dist"),
+    filename: "bundle.js",
   },
+
+  // Plugins
+  plugins: [new MiniCssExtractPlugin()],
 
   // Loaders
   module: {
-    rules : [
+    rules: [
       // JavaScript/JS Files
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: ["babel-loader"],
       },
       // CSS Files
       {
         test: /\.css$/,
-        include: /node_modules/,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       // SGV, Font Files
       {
         test: /\.(svg|eot|woff|woff2|ttf)$/,
-        use: ['file-loader']
-    }
-    ]
+        use: ["file-loader"],
+      },
+    ],
   },
 
   // Dev server settings
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 9000
+    port: 9000,
   },
-
-  // Plugins
-  plugins: [],
 
   // Terser to minify js
   optimization: {
@@ -57,6 +58,7 @@ const config = {
       new TerserPlugin({
         test: /\.js(\?.*)?$/i,
       }),
+      new OptimizeCSSAssetsPlugin({}),
     ],
   },
 
@@ -64,9 +66,9 @@ const config = {
   // Reload On File Change
   watch: true,
   // Development Tools (Map Errors To Source File)
-  devtool: 'source-map',
+  devtool: "source-map",
 
-  mode: 'production'
+  mode: "development",
 };
 
 // Exports

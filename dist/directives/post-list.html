@@ -1,0 +1,23 @@
+<md-card>
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-caption md-tagline">{{ postData._embedded["wp:term"]["0"]["0"].name | uppercase }}</span>
+      <a ng-href="{{ '#!/receptek/' + postData.slug }}" class="mt-anchor"
+        ng-style="{ 'color': 'currentColor', 'text-decoration': 'none'}">
+        <span class="md-title">{{ postData.title.rendered | decodeHtmlEntities }}</span>
+      </a>
+      <span class="md-subhead" ng-bind-html="removeEmoji(postData.excerpt.rendered)"></span>
+    </md-card-title-text>
+    <md-card-title-media>
+      <div class="md-media-md card-media">
+        <img ng-src="{{ postData._embedded['wp:featuredmedia']['0'].source_url }}"
+          alt="{{ postData.title.rendered | decodeHtmlEntities }}">
+      </div>
+    </md-card-title-media>
+  </md-card-title>
+  <md-card-actions layout="row" layout-align="end center">
+    <md-button class="md-primary" ng-href="{{ '#!/receptek/' + postData.slug }}">Tovább <i class="fa fa-chevron-right"
+        ng-style="{ 'color': '#CCC'}"></i>
+    </md-button>
+  </md-card-actions>
+</md-card>

@@ -1,0 +1,11 @@
+{{paginatorData}}
+
+<nav ng-if="paginatorData.totalPages" ng-style="{ 'margin-top': '32px', 'margin-bottom': '64px'}">
+  <section layout="row" layout-align="left left" layout-wrap>
+    <a class="md-paginator-links" ng-repeat="x in [].constructor(paginatorData.totalPages) track by $index"
+      ng-href="{{ '#!/receptek/oldal/' + ($index + 1) }}"
+      ng-class="{ 'md-primary md-paginator-active': paginatorData.pageNumber == ($index + 1) }">
+      {{ $index + 1 }}
+    </a>
+  </section>
+</nav>
